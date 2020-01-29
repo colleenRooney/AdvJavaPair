@@ -9,4 +9,10 @@ public class DiamondTest
   public void canInstantiateDiamondClass() {
     new Diamond();
   }
+
+  @Test
+  public void makeDiamondWithAReturnsA() {
+      String output = Diamond.makeDiamond('A');
+      assert(output == "A");
+  }
 }

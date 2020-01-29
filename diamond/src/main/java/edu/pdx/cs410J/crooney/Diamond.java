@@ -13,4 +13,8 @@ public class Diamond {
     System.err.println("Missing command line arguments");
     System.exit(1);
   }
+
+  public static String makeDiamond(char a) {
+    return "A";
+  }
 }

@@ -13,8 +13,27 @@ public class Diamond {
                                                                                     
 
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
-    System.exit(1);
+    if (args.length > 1) {
+      System.err.println("Too many command line arguments");
+      System.exit(1);
+    }
+    else if (args.length < 1) {
+      System.err.println("Missing command line argument");
+      System.exit(1);
+    }
+    if (args[0].length() != 1) {
+      System.err.println("Input single alphabet character");
+      System.exit(1);
+    }
+    char inputChar = args[0].toCharArray()[0];
+    if (inputChar < 'A' || inputChar > 'Z') {
+      System.err.println("Input uppercase alphabet character");
+      System.exit(1);
+    }
+    List<String> diamond = makeDiamond(inputChar);
+    for (String line : diamond) {
+      System.out.println(line);
+    }
   }
 
   public static List<String> makeDiamond(char inputChar) {
@@ -36,7 +55,7 @@ public class Diamond {
           stringBuilder.append(' ');
         }
       }
-      if (rowIndex > nLetters) {
+      if (rowIndex == nLetters) {
           modifier = -1;
       }
       currentLetter += modifier;

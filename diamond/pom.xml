@@ -11,7 +11,7 @@
   <version>Winter2020</version>
   <packaging>jar</packaging>
 
-  <name>Kata Project</name>
+  <name>Diamond Project</name>
   <description>A simple project for getting started with code diamonds</description>
   <url>http://www.cs.pdx.edu</url>
 
@@ -36,7 +36,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>edu.pdx.cs410J.kata.Kata</mainClass>
+              <mainClass>edu.pdx.cs410J.crooney.Diamond</mainClass>
             </manifest>
           </archive>
         </configuration>
